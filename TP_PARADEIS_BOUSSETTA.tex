@@ -45,7 +45,7 @@
 
 \begin{figure}[ht]
 \centering
-\includegraphics{../logo_ul.png}
+\includegraphics{image/logo_ul.png}
 \end{figure}
 
 
@@ -80,14 +80,14 @@
 Il existe le site \textit{https://play.typeracer.com/}
 
 \begin{center}
-\includegraphics[scale=0.5]{typing.PNG}
+\includegraphics[scale=0.5]{image/typing.PNG}
 \end{center}
 
 \newpage
 
 \subsection{Tutoriels Vim et Emacs} %2
 
-\subsubsection{Avec emacs}
+\subsubsection*{Avec emacs}
 
 \begin{enumerate}
 \item Quitter emacs, ctrl + x puis ctrl + c
@@ -155,7 +155,7 @@ sudo nano ~/.zshrc
 On ajoute dans ~/.oh-my-zsh/themes/robbyrussell.zsh-theme :
 
 \begin{center}
-\includegraphics[]{zsh.png}
+\includegraphics[]{image/zsh.png}
 \end{center}
 
 \subsection{Raccourci ZSH} %8
@@ -178,6 +178,8 @@ bindkey "^b" apache_start
 	\end{verbatim}
 \end{commandline}
 
+\newpage
+
 \subsection{Emulateurs de terminaux}
 
 \subsubsection{ Cool-Retro-Term}
@@ -186,14 +188,26 @@ Avec l’éditeur de texte « nano » il n’y a aucun code couleur avec ce term
 Avec l’éditeur « Vim » la typologie des éléments importants est un peu plus rouge.
 Ce terminal ne change pas grand-chose, c’est juste le style.
 
+\begin{center}
+\includegraphics[scale=0.2]{image/coolRetroTerm.png}
+\end{center}
+
 \subsubsection{ eDEX-UI}
 \noindent Fonctionnalités: Permet d'avoir plusieurs onglets en même temps, déplacement dans les dossiers depuis l'UI, informations sur l'utilisation de l'hardware, clavier virtuel pour écrans tactiles, différents thèmes pour différents goûts.
 
 \noindent Rapidité: Assez rapide à lancer, mais réduit les performances
 
-\noindent Documentation: Courte mais complète
+\begin{center}
+\includegraphics[scale=0.2]{image/edexUI.png}
+\end{center}
 
-\noindent Ecosystème: Puisqu'il s'agit d'un UI, le fonctionnement du shell reste en principe le même.
+\subsubsection{ Terminator}
+\noindent Terminal virtuel permettant une organisation plus simple des fenêtres car il permet d'avoir plusieurs terminaux dans une seule fenêtre.
+
+
+\begin{center}
+\includegraphics[scale=0.3]{image/terminator.png}
+\end{center}
 
 \section{(SSH)}
 
@@ -275,7 +289,7 @@ une fois connecté a notre CLI il faut ouvrir un autre terminal et via notre mac
 curl http://localhost:8000/cgi-bin/test1.cgi et nous aurons comme résultat :
 
 \begin{center}
-\includegraphics[]{curl.png}
+\includegraphics[]{image/curl.png}
 \end{center}
 
 Si nous coupons le tunnel sur bob@cli sur notre deuxième terminal le curl http://localhost:8000/cgi-bin/test1.cgi ne fonctionnera plus.
