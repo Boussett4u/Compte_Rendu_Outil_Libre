@@ -1,0 +1,429 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lachaise Assignment
+% LaTeX Template
+% Version 1.0 (26/6/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Marion Lachaise & François Févotte
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{TP Outil Libre} % Title of the assignment
+
+\author{Paradeis Arnaud - Boussetta Nael} % Author name and email address
+
+
+\date{Université de Lorraine --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+
+
+
+\begin{document}
+
+\maketitle % Print the title
+
+\begin{figure}[ht]
+\centering
+\includegraphics{../logo_ul.png}
+\end{figure}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+
+
+%------------------------------------------------
+\section{(Environment efficiency)}
+
+\subsection{Tableau} %1
+
+\begin{center}
+   \begin{tabular}{| l | c | }
+     \hline
+     Afficher la liste des périphériques & xinput list \\ \hline
+     Désactiver ou réactiver le périphérique & sudo xinput set-prop 13 "Device Enabled" 1 ou  0 \\ \hline
+     Naviguer dans les fenêtres ouvertes & alt+tab \\ \hline
+     Rechercher les appli & Touche windows \\ \hline
+     Naviguer sur une page internet & tab   \\ \hline
+     Fermer la page web & alt+f4 \\ \hline
+     Changer d'onglet sur firefox & ctrl + tab   \\ \hline
+     Ouvrir et fermer les onglets sur firefox & F10 + flèches directionnelles \\ \hline
+     Aller directement dans la barre de recherche & F6 \\ \hline
+   \end{tabular}
+ \end{center}
+
+\subsection{Amélioration au clavier}
+Il existe le site \textit{https://play.typeracer.com/}
+
+\begin{center}
+\includegraphics[scale=0.5]{typing.PNG}
+\end{center}
+
+\newpage
+
+\subsection{Tutoriels Vim et Emacs} %2
+
+\subsubsection{Avec emacs}
+
+\begin{enumerate}
+\item Quitter emacs, ctrl + x puis ctrl + c
+\item Descendre d'une page, ctrl + v
+\item Monter d'une page, alt + v
+\item Déplacer le cursor, ctrl + <Première lettre du mot de la direction> (Donc f pour forward b pour back etc...)
+\end{enumerate}
+
+Pour que emacs soit l'éditeur par défaut : update-alternatives --config editor
+
+\subsection{History} %3
+
+Pour supprimer des éléments de mon historique : export HISTIGNORE=ls ou cd ou pwd
+
+
+\subsection{Alias} %5
+
+
+\begin{commandline}
+	\begin{verbatim}
+function mkdcd () { mkdir "$1" && cd "$1" }
+function gitemergency() {
+	git add .
+	git commit -a -m "$1"
+	git push
+	git status
+}
+	 \end{verbatim}
+\end{commandline}
+
+\subsection{Back up} %6
+\noindent sudo update-alternatives --config editor \\
+
+\begin{commandline}
+	\begin{verbatim}
+_backup() {
+    local cur prev opts
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    local files=("${cur}"*)
+    case $COMP_CWORD in
+        1) opts=`getent passwd | cut -d: -f1`;;
+        2) opts="now tonight tomorrow";;
+        3) opts="${files[@]}";;
+        *);;
+    esac
+    COMPREPLY=()
+    COMPREPLY=( $(compgen -W "$opts" -- ${cur}) )
+    return 0
+}
+complete -o nospace -F _backup backup
+	 \end{verbatim}
+\end{commandline}
+
+\subsection{ZSH Vagrant} %7
+
+\begin{commandline}
+	\begin{verbatim}
+cd /home/arnaud/.oh-my-zsh/plugins/vagrant-prompt  
+sudo nano vagrant-prompt.plugin.zsh
+sudo nano ~/.zshrc
+~/.oh-my-zsh/themes/robbyrussell.zsh-theme
+	 \end{verbatim}
+\end{commandline}
+On ajoute dans ~/.oh-my-zsh/themes/robbyrussell.zsh-theme :
+
+\begin{center}
+\includegraphics[]{zsh.png}
+\end{center}
+
+\subsection{Raccourci ZSH} %8
+Dans le ~/.zshrc :
+
+\begin{commandline}
+	\begin{verbatim}
+function apache_start() {
+	if  /etc/init.d/apache2 status > /dev/null; then
+        		echo "apache2 se stop"
+	else
+        		echo "le service apache2 est déja stoppé"
+	fi
+	sudo service apache2 stop
+}
+
+zle -N apache_start
+bindkey "^b" apache_start
+
+	\end{verbatim}
+\end{commandline}
+
+\subsection{Emulateurs de terminaux}
+
+\subsubsection{ Cool-Retro-Term}
+\noindent Ce terminal simule un terminal old school avec un style Fallout.
+Avec l’éditeur de texte « nano » il n’y a aucun code couleur avec ce terminal a part une typologie plus foncé lors des éléments importants.
+Avec l’éditeur « Vim » la typologie des éléments importants est un peu plus rouge.
+Ce terminal ne change pas grand-chose, c’est juste le style.
+
+\subsubsection{ eDEX-UI}
+\noindent Fonctionnalités: Permet d'avoir plusieurs onglets en même temps, déplacement dans les dossiers depuis l'UI, informations sur l'utilisation de l'hardware, clavier virtuel pour écrans tactiles, différents thèmes pour différents goûts.
+
+\noindent Rapidité: Assez rapide à lancer, mais réduit les performances
+
+\noindent Documentation: Courte mais complète
+
+\noindent Ecosystème: Puisqu'il s'agit d'un UI, le fonctionnement du shell reste en principe le même.
+
+\section{(SSH)}
+
+\subsection{Connection}
+\noindent Ssh bob@10.0.0.2
+
+On remarque que l'on n'a pas accès aux commandes lancées sur l'environnement Vagrant
+
+\subsection{Clés privées et publiques} %9
+
+\noindent ssh-keygen -b 4096 va ajouter une clé
+\\
+Pour ajouter la clée à l’utilisateur de la machine distante : ssh-copy-id alice@10.0.0.2
+\\
+Il nous faudra rentrer une passphrase pour la première connexion
+\\
+\\
+Pour ajouter une clée publique manuellement sur notre machine hôte,  afficher notre clée plublique créé précédemment. Ensuite il faut se connecter à l'utilisateur de la machine souhaitée.
+Il faut avoir un dossier .ssh ainsi qu'un fichier authorized\_keys dans le home de l'utilisateur. Ensuite, il faut copier la clée publique dans ce fichier.
+\\
+\\
+Bonus :
+
+\noindent Une passphrase est un "mot de passe" permettant de protéger une clée de cryptage
+La clée de cryptage est dérivée de la passphrase pour chiffrer la ressource à protéger.
+\\
+\\
+En exécutant ssh-add, cela va nous permettre de mettre notre passphrase en mémoire pour éviter de la taper a chaque connexion.
+
+\subsection{Purge SSH} %10
+
+\noindent Pour éviter de rentrer une empreinte lors de la première connexion :
+il faut afficher l’empreinte de notre serveur sur le quel nous voulons nous connecter.
+\\
+\noindent ssh-keyscan -H 10.0.0.3
+
+\noindent On l'ajoute dans notre /.ssh/known\_host. Cela nous permettra de nous connecter sans empreinte .
+Il faut créer notre fichier config dans .ssh
+\begin{commandline}
+	\begin{verbatim}
+Host bc # alias
+Hostname 10.0.0.3 # ip machine
+User bob # l’utilisateur au quel nous voulons nous connecter.
+	\end{verbatim}
+\end{commandline}
+
+\noindent Après avoir exécuter ssh bc, nous serons directement connecté à bc avec l'utilisateur Bob.
+
+\subsection{SFTP} %11
+
+\noindent On se connecte en sftp à alice : sftp alice@10.0.0.2 
+\\
+\noindent get test \# pour prendre un fichier de la machine virtuelle vers notre machine.
+\\
+\noindent put test \# pour prendre un fichier de notre machine vers la machine vituelle.
+\\
+Pour synchroniser des répertoires de notre machine virtuelle à notre machine hôte avec sshfs.
+\\
+\noindent sshfs alice@10.0.0.2:/home /tmp/alicecli
+\\
+Le home de alice sera synchronisé et mis à jour dans notre répertoire /tmp/alicecli
+
+\begin{warn}
+Bien créer les répertoires avant, cette commande ne va pas les créer à votre place
+\end{warn}
+
+\noindent Si nous modifions notre fichier paratagée que ce soit sur notre machine hôte ou notre machine virtuelle les changements seront effectués dans les 2 sens.
+
+\subsection{Tunnel SSH 1}
+
+\noindent Depuis notre local host pour se connecter a notre serveur en passant par la vm CLI
+\\
+ ssh -L 8000:10.0.0.3:80 bob@10.0.0.2
+\begin{warn}
+10.0.0.3 est le serveur que nous voulons contacter et 10.0.0.2 est la machine par laquelle nous voulons passer pour se connecter au serveur
+\end{warn}
+une fois connecté a notre CLI il faut ouvrir un autre terminal et via notre machine host
+\\
+curl http://localhost:8000/cgi-bin/test1.cgi et nous aurons comme résultat :
+
+\begin{center}
+\includegraphics[]{curl.png}
+\end{center}
+
+Si nous coupons le tunnel sur bob@cli sur notre deuxième terminal le curl http://localhost:8000/cgi-bin/test1.cgi ne fonctionnera plus.
+
+\subsection{Tunnel SSH 2}
+
+\noindent ssh -L 9000:10.0.0.3:80 bob@10.0.0.2 
+\\
+Pour créer le tunnel, ensuite dans le terminal de notre machine hôte 
+\\
+ssh -D 9000 bob@cli.local 
+\\
+Pour créer le port 9000,
+
+\noindent Installer tsocks.
+\\
+tsocks on
+\\
+tsocks firefox
+\\
+et dans l’url taper http://srv,local/test1…….etc
+\\
+et nous aurons accès à notre serveur via CLI .
+
+
+\subsection{X11 Forwarding}
+
+\noindent Sur le serveur on installe les paquets x server avec la commande : sudo apt install x11-apps
+\\
+En local sur notre machine on se connecte en ssh : ssh -X bob@10.0.0.2
+\\
+Quand nous sommes connectés sur le serveur nous pouvons exécuter une application graphique qui se lancera en local : 
+\\
+xeyes
+
+
+
+\subsection{Rebonds}
+
+\subsubsection{ProxyJump}
+
+\noindent Il faut ajouter dans le fichier ~/.ssh/config
+
+\begin{commandline}
+	\begin{verbatim}
+Host bastion
+    Hostname 10.0.0.2
+    User bob
+
+Host srv
+    Hostname 10.0.0.3
+    ProxyJump bastion
+    User bob
+	\end{verbatim}
+\end{commandline}
+\noindent On se connecte avec ssh srv, en exécutant la commande who on voit l'adresse de CLI et non SRV
+
+\subsubsection{ProxyCommand}
+
+\begin{commandline}
+	\begin{verbatim}
+Host bastion
+    Hostname 10.0.0.2
+    User bob
+
+Host srvcmd
+    Hostname 10.0.0.3
+    User bob
+    ProxyCommand ssh bastion -W %h:%p
+	\end{verbatim}
+\end{commandline}
+
+\noindent Cela revient au même avec ProxyCommand mais on laisse des traces sur le serveur passerelle.
+
+\subsection{BONUS}
+
+\section{Git}
+
+\subsection{}
+On crée un repository dans le répertoire : git init
+
+On copie le vagrant file et dossier ssh dans le nouveau dossier
+
+On les envoie sur le repository : git commit
+
+On vérifie : git status
+
+Les 2 fichiers apparaîtrons en rouge
+
+On fait git add des 2 fichier
+
+vagrant up
+
+vagrant halt
+
+On vérifie le repository : git status 
+
+Nouveau ,vagrant/ apparaît en rouge
+On créer le .gitignore dans le dossier
+
+Ajouter le .vagrant 
+
+lors d’un git status le vagrant ne s’affiche pas en rouge.
+
+\subsection{}
+
+On crée une nouvelle branche : git checkout -b branche
+
+On ajoute l'utilisateur Patrick et on installe php et apache
+
+On effectue les commit : git add -p Vagrantfile | git commit -m new "ajout du branche"
+
+On revient sur la branche main : git checkout master
+
+On vérifie que l'on n'a pas de modificationns : git log
+
+Le working directory est comme on l'a laissé avant de créer la nouvelle branche
+
+On fusionne les branches : git merge branche
+
+On inspecte le commit : git log
+
+On a bien les modifications
+
+On vérifie si la branche existe toujours : git branch
+
+Elle existe toujours mais on en a plus besoin
+
+On supprime la branche : git branch -d branche
+
+\subsection{}
+
+On crée une nouvelle branche : git checkout -b forward-new-port
+
+On modifie le VagrantFile et on commmit : git add Vagrant | git commmit -m "ajout du port"
+
+On retourne sur main, on modifie le VagrantFile et on commit : git add Vagrant | git commmit -m "ajout du port"
+
+On merge : git merge
+
+On aura donc un conflit, il nous suffit de de modifier le fichier et de l'ajouter : git add VagrantFile
+
+On vérifie que le conflit est résolu : git status
+
+On termine le merge : git merge --continue 
+
+\subsection{}
+
+
+\end{document}
+
