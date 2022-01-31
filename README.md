@@ -10,5 +10,6 @@ Ce dépôt Github contient notre compte rendu du cours d'outil libre côté clie
 
 * Membre :
 
-  * Arnaud Paradeis [@julienleows](https://github.com/julienleows)
-	* Nael Boussetta [@boussett4u](https://github.com/boussett4u)
+* Arnaud Paradeis [@Arnaud57570](https://github.com/Arnaud57570)
+* Theo Bolmont [@RoyalLilium](https://github.com/RoyalLilium)
+* Nael Boussetta [@boussett4u](https://github.com/boussett4u)
