@@ -462,5 +462,13 @@ On vérifie si la branche existe toujours : git branch, elle existe toujours
 
 On peut donc la supprimer : git branch -D branche
 
+Maintenant on crée une nouvelle branche : git checkout -b forward-new-port
+
+On modifie le VagrantFile sur la branche forward-new-port pour avoir un forward au port 8081 puis on commit
+
+On retourne sur le main et on configure le VagrantFile pour avoir le forward du port 80 au port 8080
+
+On merge ensuite les deux branches et on obtient un conflit.
+
 \end{document}
 
