@@ -1,0 +1,116 @@
+\documentclass{article}
+\usepackage[utf8] {inputenc}
+\usepackage [left=6cm, right=5cm, top=6cm, bottom=5cm]{geometry}
+
+\parindent=0cm
+
+\begin{document}
+\begin{center}
+\huge  \textbf{Commandes utilisateur LS(1) LS(1)} \\
+\normalsize \textit {Arnaud Paradeis - Nael Boussetta - Théo Bolmont}\\[4cm]
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\par NOM\\
+		\textit{\textbf{ls - Liste du contenu des répertoires.}}\\
+\par SYNOPSIS\\
+		\textit{\textbf{ls [OPTION]... [FICHIER]...}}\\
+\par DESCRIPTION\\
+		\textit{\textbf{Liste les informations sur les FICHIERS (le répertoire courant par défaut).
+       Les entrées sont triées par ordre alphabétique si aucune des options -cftuvSUX ou --sort n'est spécifiée.
+       spécifié. Les arguments obligatoires des options longues sont également obligatoires pour les options courtes.
+       aussi.}}\\
+
+\par --a, --all\\
+		\textit{\textbf{n'ignore pas les entrées commençant par .}}\\
+
+\par -A, --almost-all\\
+		\textit{\textbf{n'énumère pas les sous-entendus . et .}}\\
+
+\par --author\\
+              \textit{\textbf{avec -l, affiche l'auteur de chaque fichier}}\\
+
+   \par-b, --escape\\
+              \textit{\textbf{affiche les échappements de style C pour les caractères non graphiques}}\\
+
+       \par--block-size=SIZE\\
+             \textit{\textbf{ avec -l, met les tailles à l'échelle par SIZE lors de l'impression ; par exemple,
+              '--block-size=M' ; voir le format SIZE ci-dessous}}\\
+
+      \par -B, --ignore-backups\\
+               \textit{\textbf{ne répertorie pas les entrées implicites se terminant par ~}}\\
+
+      \par -c avec -lt \\
+		  \textit{\textbf{trier par, et afficher, ctime (heure de la dernière modification de
+              informations sur l'état du fichier) ; avec -l : afficher ctime et trier par nom ;
+              sinon : trier par ctime, le plus récent en premier.}}\\
+
+       \par-C \\
+	 \textit{\textbf{liste les entrées par colonnes}}\\
+
+
+       \par --color[=WHEN] \\
+               \textit{\textbf{colore la sortie ; WHEN peut être 'always' (par défaut si omis),
+              auto', ou 'jamais' ; plus d'informations ci-dessous}}\\
+
+       \par-d, --directory\\
+              \textit{\textbf{liste les répertoires eux-mêmes, pas leur contenu}}\\
+
+      \par -D, --dired\\
+              \textit{\textbf{génère une sortie conçue pour le mode dired d'Emacs}}\\
+
+       \par-f \\
+		 \textit{\textbf{ne pas trier, activer -aU, désactiver -ls --color}}\\
+
+       \par -F, --classify\\
+               \textit{\textbf{ajouter un indicateur (l'un des */=>@|) aux entrées}}\\
+
+      \par --file-type\\
+              \textit{\textbf{de même, sauf qu'il ne faut pas ajouter '*'.}}\\
+
+       \par --format=WORD\\
+              \textit{\textbf{across -x, commas -m, horizontal -x, long -l, single-column -1,
+              verbeux -l, vertical -C}}\\
+
+       \par --full-time\\
+              \textit{\textbf{comme -l --time-style=full-iso}}\\
+
+       \par-g comme -l\\
+	 \textit{\textbf{mais sans liste de propriétaires}}\\
+
+       \par --group-directories-first\\
+              \textit{\textbf{regroupe les répertoires avant les fichiers ;
+		peut être complété par une option --sort, mais toute utilisation de
+              --sort=none (-U) désactive le regroupement.}}\\
+
+       \par -G, --no-group\\
+               \textit{\textbf{dans une longue liste, ne pas imprimer les noms de groupe}}\\
+
+       \par-h, --human-readable\\
+               \textit{\textbf{avec -l et -s, imprime les tailles comme 1K 234M 2G etc.}}\\
+
+       \par--si \\
+		 \textit{\textbf{de même, mais utiliser des puissances de 1000 et non 1024}}\\
+
+        \par-H, --dereference-command-line\\
+              \textit{\textbf{suit les liens symboliques listés sur la ligne de commande}}\\
+
+      \par --dereference-command-line-symlink-to-dir\\
+              \textit{\textbf{suit chaque lien symbolique de la ligne de commande}}\\
+
+              
+       \par--hide=PATTERN\\
+              \textit{\textbf{ne pas lister les entrées implicites correspondant au PATTERN de l'interpréteur de commandes (remplacé
+              par -a ou -A)}}\\
+
+
+
+\end{document}
