@@ -1,24 +1,32 @@
 \documentclass{article}
 \usepackage[utf8] {inputenc}
-\usepackage [left=6cm, right=5cm, top=6cm, bottom=5cm]{geometry}
+\usepackage [left=6cm, right=5cm, top=3.5cm, bottom=3.5cm]{geometry}
+\usepackage{graphicx}
 
 \parindent=0cm
 
 \begin{document}
 \begin{center}
-\huge  \textbf{Commandes utilisateur LS(1) LS(1)} \\
+\includegraphics[scale=0.2]{image/linux.jpg}
+\huge  \textbf{Commandes utilisateur LS } \\
+
 
 \normalsize \textit {Arnaud Paradeis - Nael Boussetta - Théo Bolmont}\\[4cm]
 \end{center}
-\includegraphics[scale=0.5]{image/typing.PNG}
 
 
-
-
-
-
-
-
+\begin{tabular}{| c | c | }
+     \hline
+      ls& Liste le répertoire courant\\ \hline
+     ls rep&iste le répertoire rep \\ \hline
+      ls -a& Liste aussi les entrées cachées (noms commençant par un point)\\ \hline
+      ls -l&Liste au format long (attributs)\\ \hline
+      -g& Donne le groupe   \\ \hline
+      -i& Donne le numéro d'inode \\ \hline
+      -s& Donne la taille en blocs   \\ \hline
+   \end{tabular}
+\\
+\\
 
 
 \par NOM\\
@@ -212,6 +220,8 @@
        \par--help affiche cette aide et quitte\\
 
         \par--version\\
+
+
 
 
 \end{document}
