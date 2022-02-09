@@ -110,7 +110,106 @@
        \par--hide=PATTERN\\
               \textit{\textbf{ne pas lister les entrées implicites correspondant au PATTERN de l'interpréteur de commandes (remplacé
               par -a ou -A)}}\\
+\par--hyperlien[=WHEN]\\
+              \textit{\textbf{Hyperlien vers les noms de fichiers ; WHEN peut être 'always' (par défaut si omis),
+              auto', ou 'jamais'.}}\\
 
+       \par--indicator-style=WORD\\
+               \textit{\textbf{ajoute un indicateur de style WORD aux noms des entrées : aucun (par défaut),
+              slash (-p), file-type (--file-type), classify (-F)}}\\
+   
+       \par -i, --inode\\
+              \textit{\textbf{ affiche le numéro d'index de chaque fichier}}\\
+
+        \par-I, --ignore=PATTERN\\
+               \textit{\textbf{ne pas lister les entrées implicites correspondant au PATTERN du shell}}\\
+
+       \par-k, --kibibytes\\
+              \textit{\textbf{ utilise par défaut des blocs de 1024 octets pour l'utilisation du disque ; utilisé seulement avec -s
+              et les totaux par répertoire}}\\
+
+      \par -l \\   \textit{\textbf{ utilise un format de liste long}}\\
+
+      \par -L, --dereference\\  
+             \textit{\textbf{ lors de l'affichage des informations sur les fichiers pour un lien symbolique, affiche les informations sur le fichier auquel le lien fait référence.
+              pour le fichier auquel le lien fait référence plutôt que pour le lien lui-même.
+              lui-même}}\\
+
+       \par-m\\   \textit{\textbf{remplir la largeur avec une liste d'entrées séparées par des virgules}}\\
+
+       \par -n, --numeric-uid-gid\\  
+               \textit{\textbf{comme -l, mais liste les ID numériques d'utilisateurs et de groupes}}\\
+
+        \par-N, --literal\\  
+              \textit{\textbf{affiche les noms des entrées sans les citer}}\\
+
+       \par -o \\      \textit{\textbf{comme -l, mais ne liste pas les informations de groupe}}\\
+
+       \par -p, --indicator-style=slash \\ 
+              \textit{\textbf{ajoute l'indicateur / aux répertoires}}\\
+
+        \par-q, --hide-control-chars\\
+              \textit{\textbf{affiche ? à la place des caractères non graphiques}}\\
+
+        \par-Q, --quote-name\\
+              \textit{\textbf{met les noms des entrées entre guillemets doubles}}\\
+
+
+       \par-r, --reverse\\
+               \textit{\textbf{inverser l'ordre pendant le tri}}\\
+
+      \par -R, --recursive\\
+              \textit{\textbf{liste les sous-répertoires récursivement}}\\
+
+      \par -s, --size\\
+             \textit{\textbf{  affiche la taille allouée de chaque fichier, en blocs}}\\
+
+       \par-S\\          \textit{\textbf{ trier par taille de fichier, le plus grand en premier}}\\
+
+       \par--sort=WORD\\ 
+              \textit{\textbf{trie par MOT au lieu du nom : aucun (-U), taille (-S), temps (-t),
+              version (-v), extension (-X)}}\\
+
+       \par --time=MOT\\ 
+              \textit{\textbf{avec -l, affiche l'heure sous forme de MOT au lieu de l'heure de modification par défaut :
+              atime ou accès ou utilisation (-u) ; ctime ou état (-c) ; utilise également
+              l'heure spécifiée comme clé de tri si --sort=time (le plus récent en premier)}}\\
+
+   
+
+        \par -t \\      \textit{\textbf{trier par heure de modification, la plus récente en premier}}\\
+
+      \par -T, --tabsize=COLS\\  
+              \textit{\textbf{suppose que la tabulation s'arrête à chaque COLS au lieu de 8}}\\
+
+         \par-u avec -lt :\\    \textit{\textbf{trier et afficher l'heure d'accès ; avec -l : afficher l'heure d'accès et trier par nom ; sinon : trier par nom.
+              d'accès et trier par nom ; sinon : trier par temps d'accès, le plus récent en premier
+              d'abord}}\\
+
+      \par -U \\
+		 \textit{\textbf{ne trie pas ; liste les entrées dans l'ordre du répertoire.}}\\
+
+       \par-v\\
+		 \textit{\textbf{ tri naturel des numéros (de version) dans le texte}}\\
+
+       \par-w, --width=COLS\\
+              \textit{\textbf{définit la largeur de sortie à COLS.  0 signifie aucune limite}}\\
+
+      \par -x\\
+		\textit{\textbf{ liste les entrées par lignes plutôt que par colonnes}}\\
+
+      \par -X\\
+	 \textit{\textbf{trier alphabétiquement par extension d'entrée}}\\
+
+       \par-Z, --context\\
+              \textit{\textbf{ affiche le contexte de sécurité de chaque fichier}}\\
+
+        \par-1 \\
+		\textit{\textbf{liste un fichier par ligne.  Évitez  avec -q ou -b.}}\\
+
+       \par--help affiche cette aide et quitte\\
+
+        \par--version\\
 
 
 \end{document}
