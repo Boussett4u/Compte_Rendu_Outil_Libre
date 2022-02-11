@@ -8,7 +8,7 @@
 
 Ce dépôt Github contient notre compte rendu du cours d'outil libre côté client.
 
-* Membre :
+Membres :
 
 * Arnaud Paradeis [@Arnaud57570](https://github.com/Arnaud57570)
 * Theo Bolmont [@RoyalLilium](https://github.com/RoyalLilium)
